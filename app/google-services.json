@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "124147638662",
+    "firebase_url": "https://cadastrousuariosimplesfirebase.firebaseio.com",
+    "project_id": "cadastrousuariosimplesfirebase",
+    "storage_bucket": "cadastrousuariosimplesfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124147638662:android:2697e3d8304193db",
+        "android_client_info": {
+          "package_name": "br.com.bossini.cadastrousuariosimplesfirebaseadscarapicuiba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124147638662-rvomes3aac09eibsunsd0tf92djv2v6b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.bossini.cadastrousuariosimplesfirebaseadscarapicuiba",
+            "certificate_hash": "131f01e241308e568f2975de37cc5ffca26684c6"
+          }
+        },
+        {
+          "client_id": "124147638662-nlnn185qnmf3dt2h9fs2mj8dp3294cs9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH-BQg-2_3SUl3J2M2WQqWNgSCNak45Bo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124147638662-nlnn185qnmf3dt2h9fs2mj8dp3294cs9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
