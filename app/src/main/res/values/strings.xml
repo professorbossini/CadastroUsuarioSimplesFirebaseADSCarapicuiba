@@ -4,4 +4,9 @@
     <string name="nome">Nome:</string>
     <string name="fone">Fone:</string>
     <string name="email">Email:</string>
+    <string name="dica_nome">Digite seu nome</string>
+    <string name="dica_fone">Digite seu telefone</string>
+    <string name="dica_email">Digite seu email</string>
+    <string name="title_activity_editar_usuario">EditarUsuarioActivity</string>
+    <string name="usuario_salvo">Ok, dados atualizados</string>
 </resources>

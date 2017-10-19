@@ -1,13 +1,14 @@
 package br.com.bossini.cadastrousuariosimplesfirebaseadscarapicuiba;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference userReference;
     private TextView nomeTextView, foneTextView, emailTextView;
+    private ImageView fotoImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         nomeTextView = (TextView) findViewById(R.id.nomeTextView);
         foneTextView = (TextView) findViewById(R.id.foneTextView);
         emailTextView = (TextView)  findViewById(R.id.emailTextView);
+        fotoImageView = (ImageView) findViewById(R.id.fotoImageView);
         database = FirebaseDatabase.getInstance();
         userReference = database.getReference("usuario");
         userReference.addValueEventListener(new ValueEventListener() {
@@ -54,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(MainActivity.this, EditarUsuarioActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -71,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
         nomeTextView.setText(Usuario.getInstance().getNome());
         foneTextView.setText(Usuario.getInstance().getFone());
         emailTextView.setText(Usuario.getInstance().getEmail());
+        if (Usuario.getInstance().getFoto() != null)
+            fotoImageView.setImageBitmap(Usuario.getInstance().getFoto());
     }
 
     @Override
@@ -86,5 +91,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        atualizaComponentesVisuais();
     }
 }
